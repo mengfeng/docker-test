@@ -12,5 +12,6 @@ steps:
     commands:
       - pwd
       - ls
+      - node app.js
 
 branches: main
