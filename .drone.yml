@@ -1,15 +1,18 @@
 kind: pipeline
 type: docker
-name: deployment
+name: build
+
 
 platform:
   os: linux
   arch: arm64
 
-steps:
-  - name: deployment
+pipeline:
+  build:
+    image: node
     commands:
       - pwd
       - ls
+      - node app.js
 
 branches: main
