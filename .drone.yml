@@ -2,17 +2,14 @@ kind: pipeline
 type: docker
 name: build
 
-
 platform:
   os: linux
   arch: arm64
 
 pipeline:
   build:
-    image: node
+    image: circleci/node:latest
     commands:
       - pwd
       - ls
       - node app.js
-
-branches: main
